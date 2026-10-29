@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вечер свободен: что посмотреть сегодня</title>
+  <meta name="description" content="Подборки фильмов, сериалов и роликов на свободный вечер. Выберите, сколько у вас времени, и получите идею.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Шапка одинакова на всех страницах: в чистом HTML её копируют в каждый файл -->
+  <header class="site-header">
+    <a class="logo" href="index.html">Вечер свободен</a>
+    <nav>
+      <a href="index.html" aria-current="page">Главная</a>
+      <a href="picks.html">Все подборки</a>
+      <a href="about.html">О сайте</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Какие кино желаете сегодня?</h1>
+      <p class="lead">Выберите, и мы предложим, что включить.</p>
+
+      <div class="chips" role="group" aria-label="Сколько времени есть">
+        <button class="chip" data-slot="short" aria-pressed="false">Полчаса</button>
+        <button class="chip" data-slot="film" aria-pressed="true">Один фильм</button>
+        <button class="chip" data-slot="evening" aria-pressed="false">Весь вечер</button>
+      </div>
+
+      <button class="primary" id="pick">Выбрать за меня</button>
+
+      <!-- Сюда JavaScript вставляет результат -->
+      <div id="result" class="result" aria-live="polite"></div>
+    </section>
+
+    <section class="more">
+      <h2>Хочется выбрать самому?</h2>
+      <p>В каталоге все подборки: фильмы, сериалы и ролики с фильтрами по типу и времени.</p>
+      <a class="link-button" href="picks.html">Открыть все подборки</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Вечер свободен. Подборки собраны вручную.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

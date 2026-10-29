@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Все подборки: Вечер свободен</title>
+  <meta name="description" content="Каталог фильмов, сериалов и роликов с фильтрами по типу и времени.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">Вечер свободен</a>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="picks.html" aria-current="page">Все подборки</a>
+      <a href="about.html">О сайте</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <h1>Все подборки</h1>
+      <p class="lead">Отфильтруйте по типу и по времени.</p>
+
+      <div class="chips" role="group" aria-label="Тип">
+        <button class="chip" data-type="all" aria-pressed="true">Всё</button>
+        <button class="chip" data-type="movie" aria-pressed="false">Фильмы</button>
+        <button class="chip" data-type="series" aria-pressed="false">Сериалы</button>
+        <button class="chip" data-type="youtube" aria-pressed="false">YouTube</button>
+      </div>
+    </section>
+
+    <!-- Карточки создаёт script.js из списка PICKS -->
+    <section id="list" class="list" aria-live="polite"></section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Вечер свободен. Подборки собраны вручную.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
